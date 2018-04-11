@@ -5,6 +5,18 @@
 ## Overview 
 
     Tech Tracker is an online application for the Users to track the Technologies over the course of time. 
+### Techical Specifications :
+
+#### This application has:
+
+```
+Three models – 
+
+1. USER
+2. TECH STACK
+3. RESOURCES
+
+```
 
 ## User Story
 
