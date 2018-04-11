@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'PROJECT 2' });
+  res.render('index', { title: 'EXPRESS Router on Local Host Body-Parser added' });
 });
 
 module.exports = router;

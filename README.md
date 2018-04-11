@@ -5,7 +5,7 @@
 ## Overview 
 
     Tech Tracker is an online application for the Users to track the Technologies over the course of time. 
-    
+
 ### Techical Specifications :
 
 #### This application has:
@@ -34,6 +34,7 @@ Three models –
 ## Heroku 
 
 ## Resources
+[stackoverflow.com](https://stackoverflow.com)
 
 ## Technologies Used
 
