@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'EXPRESS Router on Local Host Body-Parser added' });
-});
+ router.get('/', function(req, res, next) {
+   res.render('index', { title: 'TECK TRACKER -INDEX' });
+ });
 
 module.exports = router;
