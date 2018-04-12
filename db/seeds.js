@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const User = require('../models/userModel')
 
 //mongoose.connect(process.env.MONGODB_URI)
-mongoose.connect('mongodb://heroku_zzgrxx7p:pfo0tv32gb7fe0vteo55eapq55@ds147480.mlab.com:47480/heroku_zzgrxx7p')
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection
 

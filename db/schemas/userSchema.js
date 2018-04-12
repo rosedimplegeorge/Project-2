@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
     userName : String,
     email : String, 
-    yrs_Of_Exp :Number,
+    yrs_Of_Exp : Number,
     techStack :[techStackSchema]
 })
 
