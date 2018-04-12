@@ -48,8 +48,74 @@ const bejoy = new User({
     ]
 })
 
+const rose = new User({
+    userName : 'Rose',
+    email : 'rose@gmail.com',
+    yrs_Of_Exp : 3,
+    techStack :[{
+        title : 'Java',
+        description :'Java Script' ,
+        expertise : 4,
+        resources : [
+            {
+            id: 1,
+            description :'javabrains.io'
+            },
+            {
+            id: 2,
+            description :'generalassemb.ly' 
+            }
+        ]
+    },
+    {
+        title : 'Data Base',
+        description :'MongoDB' ,
+        expertise : 1,
+        resources : [
+            {
+            id: 1,
+            description :'udacity.com'
+            }
+        ]
+    }
+    ]
+})
+
+const ethan = new User({
+    userName : 'Ethan',
+    email : 'ethan@gmail.com',
+    yrs_Of_Exp : 0,
+    techStack :[{
+        title : 'Coding',
+        description :'HTML' ,
+        expertise : 1,
+        resources : [
+            {
+            id: 1,
+            description :'school.co'
+            },
+            {
+            id: 2,
+            description :'udemy.com' 
+            }
+        ]
+    },
+    {
+        title : 'games',
+        description :'video games' ,
+        expertise : 4,
+        resources : [
+            {
+            id: 1,
+            description :'ipad.com'
+            }
+        ]
+    }
+    ]
+})
+
 User.remove().then(() => {
-    return User.insertMany([bejoy])
+    return User.insertMany([bejoy,rose,ethan])
 }).then(() => {
     console.log('Saved User Successfully')
     db.close()
