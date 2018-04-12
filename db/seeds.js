@@ -18,7 +18,7 @@ const bejoy = new User({
     userName : 'Bejoy',
     email : 'bejoy@gmail.com',
     yrs_Of_Exp : 7,
-    techStack :[{
+    techStacks :[{
         title : 'Java',
         description :'Java 8' ,
         expertise : 3,
@@ -51,7 +51,7 @@ const rose = new User({
     userName : 'Rose',
     email : 'rose@gmail.com',
     yrs_Of_Exp : 3,
-    techStack :[{
+    techStacks :[{
         title : 'Java',
         description :'Java Script' ,
         expertise : 4,
@@ -84,7 +84,7 @@ const ethan = new User({
     userName : 'Ethan',
     email : 'ethan@gmail.com',
     yrs_Of_Exp : 0,
-    techStack :[{
+    techStacks :[{
         title : 'Coding',
         description :'HTML' ,
         expertise : 1,
