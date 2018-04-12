@@ -7,11 +7,19 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const PORT = process.env.PORT || 3000
 const app = express();
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
 mongoose.connect(process.env.MONGODB_URI); 
+
+const db = mongoose.connection
+
+db.on('open',() => {
+    console.log('Successfully Connected to the DB')
+})
+db.on('error',(error) => {
+    console.log(error)
+})
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,11 +50,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.listen(PORT, function(){
-  console.log("=============================")
-  console.log(" PORT is Listening on " + PORT)
-  console.log("=============================")
-})
 
 module.exports = app;
