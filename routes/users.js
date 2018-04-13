@@ -63,6 +63,14 @@ router.patch('/:id',(req,res) =>{
 
 //DELETE A USER
 
-
+router.delete('/:id',(req, res) => {
+  User.findByIdAndRemove(req.params.id).then(() => {
+    console.log('User Deleted')
+    res.send("User Deleted")
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 module.exports = router;
 
