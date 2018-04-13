@@ -45,5 +45,24 @@ router.post('/',(req, res) => {
   })
 })
 
+//UPDATE AN EXISTING USER
+
+router.patch('/:id',(req,res) =>{
+  User.findByIdAndUpdate(req.params.id,{
+    userName: req.body.userName,
+    email: req.body.email,
+    yrs_Of_Exp: req.body.yrs_Of_Exp
+  },{new: true}).then((user)=> {
+    console.log(user)
+    res.send(user)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+//DELETE A USER
+
+
 module.exports = router;
 
