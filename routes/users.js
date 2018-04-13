@@ -18,9 +18,11 @@ router.get('/', function(req, res, next) {
 
 router.get('/:id', (req, res) => {
   User.findById(req.params.id)
-  .then((user) => {
-      console.log(user)
-      res.send(user)
+  .then((users) => {
+      //console.log(user)
+      res.render('techStack/index',{
+        users : users
+      })
   })
   .catch((error) => {
       console.log(error)
