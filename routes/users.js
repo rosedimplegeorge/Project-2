@@ -8,11 +8,23 @@ router.get('/', function(req, res, next) {
   User.find({})
   .then((users) => {
     console.log(users);
-    res.send(users[0])
+    res.send(users)
   })
   .catch((error) => {
     console.log(error)
   })
-});
+})
+
+router.get('/:id', (req, res) => {
+  User.findById(req.params.id)
+  .then((user) =>{
+      console.log(user)
+      res.send(user)
+  })
+  .catch((error) => {
+      console.log(error)
+  })
+})
 
 module.exports = router;
+

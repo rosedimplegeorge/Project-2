@@ -7,6 +7,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+
 const app = express();
 const methodOverride = require('method-override')
 const bodyParser = require('body-parser')
