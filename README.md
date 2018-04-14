@@ -41,7 +41,7 @@ Three models –
 1. JS
 2. Node(application runtime environment)
 3. Express(web framework for Node.js- allows to write server-side applications in javascript)
-4. Hanlebars(Handlebars allow us to embed JS variables inside of our HTML and render it as text.)
+4. Handlebars(Handlebars allow us to embed JS variables inside of our HTML and render it as text.)
 5. Mongo DB
 6. Mongoose
 

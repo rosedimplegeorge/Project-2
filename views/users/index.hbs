@@ -1,10 +1,56 @@
-<h1>TECH - TRACKER</h1>
-<ul>
-    {{#each users}}
+<h1>TECHNICAL SKILLS - TRACKER</h1>
+<h5>TRY ME: In this fast paced IT industry, you need me to manage your skills effectively ! </h5> <br><br>
+<table width="1200px" border=1>
+<thead>
+    <tr>
+        <th>
+            User Name
+        </th>
+        <th>
+            Email
+        </th>
+        <th>
+            Years of Experience
+        </th>
+        <th>
+            Technical Expertise List
+        </th>
+        <th>
+            Modify User Details
+        </th>
+        <th>
+            Delete User
+        </th>
+    </tr>
+</thead>
+{{#each users}}
+    <tr>
+        <td align=lef>
+            {{userName}}
+        </td>
+        <td align=lef>
+            {{email}}
+        </td>
+        <td align=center>
+            {{yrs_Of_Exp}}
+        </td>
+        <td align=center>
+            <a href="/users/{{_id}}">Tech Stack List</a>
+        </td>
+        <td align=center>
+            <a href = '/users/{{_id}}/edit'>UPDATE </a>
+        </td>
+        <td align=center>
+            <a href = 'DELETE'>DELETE</a>
+        </td>
+    </tr>
 
-    <h2><li><a href="/users/{{_id}}">{{userName}}</a>         {{email}}          {{yrs_Of_Exp}}</li></h2>
-    <h3><button>UPDATE</button>            <button>DELETE</button></h3>
-    {{/each}}
-</ul>
+{{/each}}
 
-<h2><a href = '/users/new'>  New User</a></h2>
+</table>
+
+
+
+
+
+ 

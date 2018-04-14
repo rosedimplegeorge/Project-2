@@ -7,6 +7,7 @@ const User = require('../models/userModel')
 router.get('/', function(req, res, next) {
   User.find({})
   .then((users) => {
+    //res.send(users)
     res.render('users/index',{
       users : users
     })
@@ -38,8 +39,33 @@ router.post('/',(req, res) => {
 
 })
 
+//GET the User To EDIT/UPDATE
+
+router.get('/:id/edit',(req, res) => {
+  User.findById(req.params.id).then((user) => {
+    res.render('users/edit',{
+        user: user
+    })
+  })
+})
+
+//UPDATE AN EXISTING USER
+
+router.patch('/:id',(req,res) =>{
+  User.findByIdAndUpdate(req.params.id,{
+    userName: req.body.userName,
+    email: req.body.email,
+    yrs_Of_Exp: req.body.yrs_Of_Exp
+  },{new: true}).then((updatedUser)=> {
+    res.redirect(`/users/${updatedUser._id}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 
 // GET TechStack Index. 
+
 router.get('/:id', (req, res) => {
   User.findById(req.params.id)
   .then((users) => {
@@ -51,29 +77,13 @@ router.get('/:id', (req, res) => {
       console.log(error)
   })
 })
-
-//UPDATE AN EXISTING USER
-
-router.patch('/:id',(req,res) =>{
-  User.findByIdAndUpdate(req.params.id,{
-    userName: req.body.userName,
-    email: req.body.email,
-    yrs_Of_Exp: req.body.yrs_Of_Exp
-  },{new: true}).then((user)=> {
-    console.log(user)
-    res.send(user)
-  })
-  .catch((error) => {
-    console.log(error)
-  })
-})
-
 //DELETE A USER
 
 router.delete('/:id',(req, res) => {
   User.findByIdAndRemove(req.params.id).then(() => {
-    console.log('User Deleted')
-    res.send("User Deleted")
+    // console.log('User Deleted')
+    // res.send("User Deleted")
+    res.redirect('/users')
   })
   .catch((error) => {
     console.log(error)
