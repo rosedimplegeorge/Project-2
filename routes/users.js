@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
 const User = require('../models/userModel')
 
@@ -7,7 +7,6 @@ const User = require('../models/userModel')
 router.get('/', function(req, res, next) {
   User.find({})
   .then((users) => {
-    //res.send(users)
     res.render('users/index',{
       users : users
     })
@@ -52,13 +51,26 @@ router.get('/:id/edit', (req, res) => {
 //UPDATE AN EXISTING USER
 
 router.put('/:id', (req,res) =>{
-  console.log(req)
+  //console.log(req)
   User.findByIdAndUpdate(req.params.id,{
     userName: req.body.userName,
     email: req.body.email,
     yrs_Of_Exp: req.body.yrs_Of_Exp
   },{new: true}).then((updatedUser)=> {
     res.redirect(`/users/${updatedUser._id}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+//DELETE A USER
+
+router.delete('/:id',(req, res) => {
+  User.findByIdAndRemove(req.params.id).then(() => {
+    // console.log('User Deleted')
+    // res.send("User Deleted")
+    res.redirect('/users')
   })
   .catch((error) => {
     console.log(error)
@@ -78,18 +90,7 @@ router.get('/:id', (req, res) => {
       console.log(error)
   })
 })
-//DELETE A USER
 
-router.delete('/:id',(req, res) => {
-  User.findByIdAndRemove(req.params.id).then(() => {
-    // console.log('User Deleted')
-    // res.send("User Deleted")
-    res.redirect('/users')
-  })
-  .catch((error) => {
-    console.log(error)
-  })
-})
 
 
 module.exports = router;
