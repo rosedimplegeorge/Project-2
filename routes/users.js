@@ -41,7 +41,7 @@ router.post('/',(req, res) => {
 
 //GET the User To EDIT/UPDATE
 
-router.get('/:id/edit',(req, res) => {
+router.get('/:id/edit', (req, res) => {
   User.findById(req.params.id).then((user) => {
     res.render('users/edit',{
         user: user
@@ -51,7 +51,8 @@ router.get('/:id/edit',(req, res) => {
 
 //UPDATE AN EXISTING USER
 
-router.patch('/:id',(req,res) =>{
+router.put('/:id', (req,res) =>{
+  console.log(req)
   User.findByIdAndUpdate(req.params.id,{
     userName: req.body.userName,
     email: req.body.email,
