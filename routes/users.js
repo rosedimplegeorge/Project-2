@@ -115,7 +115,7 @@ router.post('/:id/techStack', (req, res) => {
     user.techStacks.push(techStack1)
 
     user.save()
-  })
+  },{new: true})
   .then((savedTechStack) => {
     res.redirect(`/users/${req.params.id}`)
   })
@@ -123,6 +123,7 @@ router.post('/:id/techStack', (req, res) => {
     console.log(error)
   })
 })
+
 
 
 module.exports = router;

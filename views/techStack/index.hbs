@@ -1,11 +1,12 @@
 
 <h1>Tech Stacks</h1>
 <ul>
-
+   
     {{#each users.techStacks}}
 
+
     <h2><li><a href = "/users/{{user._id}}/techStacks/{{_id}}/resources"> {{title}}</a>{{description}}      {{expertise}}</li></h2>
-    <h3><button>UPDATE</button>             <button>DELETE</button></h3>
+    
     {{/each}}
   
 </ul>
