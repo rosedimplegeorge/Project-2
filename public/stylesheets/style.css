@@ -1,7 +1,9 @@
 body {
   padding: 50px;
-  background-color: tomato;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  background-image: "https://i.imgur.com/iZd2Rji.png";
 }
 
 a {
@@ -10,4 +12,8 @@ a {
 
 button{
   color: black;
+}
+
+img{
+  max-width: 100%;
 }
