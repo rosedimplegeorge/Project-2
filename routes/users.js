@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 const User = require('../models/userModel')
+const TechStack = require('../models/techStackModel')
 
 // GET users Index. 
 router.get('/', function(req, res, next) {
@@ -91,6 +92,37 @@ router.get('/:id', (req, res) => {
   })
 })
 
+//ADD TECH STACK
+
+router.get('/:id/new', (req, res) => {
+  console.log(req.params.id)
+  res.render('techStack/new',{
+    userId: req.params.id
+  })
+})
+
+router.post('/:id/techStack', (req, res) => {
+
+  //console.log(req.params.id)
+  User.findById(req.params.id).then((user) => {
+    const techStack1 = new TechStack({
+      title: req.body.title,
+      description: req.body.description,
+      expertise: req.body.expertise,
+      resources: req.body.resources
+    })
+
+    user.techStacks.push(techStack1)
+
+    user.save()
+  })
+  .then((savedTechStack) => {
+    res.redirect(`/users/${req.params.id}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
 
 
 module.exports = router;
