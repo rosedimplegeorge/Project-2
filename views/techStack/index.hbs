@@ -1,16 +1,56 @@
 
-<h1>Tech Stacks</h1>
-<ul>
-   
-    {{#each users.techStacks}}
+<section class="hero is-primary is-fullwidth">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">Tech Stacks</h1>
+            <h2 class="subtitle">Your Skills ... WoW !</h2>
+        </div>
+    </div>
+</section>
+<table  class="table is-fullwidth is-bordered is-hoverable">
+<thead>
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Expertise(In Yrs)
+        </th>
+        <th>
+            Resource Link
+        </th>
+    </tr>
+</thead>
 
+<tbody>
+{{#each users.techStacks}}
+<tr>
+    <td>
+        {{title}}
+    </td>
+    <td>
+        {{description}}
+    </td>
+    <td>
+        {{expertise}}
+    </td>
+    <td>
+        <a href="/users/{{user._id}}/techStacks/{{_id}}/resources"> Resource List</a>
+    </td>
+</tr>
 
-    <h2><li><a href = "/users/{{user._id}}/techStacks/{{_id}}/resources"> {{title}}</a>{{description}}      {{expertise}}</li></h2>
-    
-    {{/each}}
-  
-</ul>
+{{/each}}
+</tbody>
+</table>
 
+<br>
+<br>
+<br>
+<nav class="breadcrumb is-large">
 <h2><a href = '/users/{{users._id}}/new'> Add New Tech Stack</a></h2>
-
 <a href = '/users'>Home</a>
+</nav>
+
