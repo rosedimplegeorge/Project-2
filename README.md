@@ -40,8 +40,11 @@ Three models –
 ## Resources
 
 [stackoverflow.com](https://stackoverflow.com)
+
 [bulma.io](https://bulma.io/)
+
 [http://mongoosejs.com/](http://mongoosejs.com/)
+
 [git.generalassemb.ly](https://git.generalassemb.ly)
 
 ## Technologies Used
