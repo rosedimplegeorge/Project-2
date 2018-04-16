@@ -4,11 +4,9 @@
 
 ## Overview 
 
-    Tech Tracker is an online application for the Users to track the Technical Skills  over the course of time. 
+    Tech Tracker is an online application for the Users to track the Technical Skills  over the course of time. As soon as you learn a new skill , add it to your new/existing Tech Stack with resources . 
 
-### Techical Specifications :
-
-
+## Techical Specifications :
 
 #### This application has:
 
@@ -63,7 +61,7 @@ Three models –
 
 ## Approch 
 
-
+Iterative 
 
 
 ## Future Scope -Unsolved Problems
