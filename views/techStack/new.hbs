@@ -1,24 +1,32 @@
-<h1> ADD NEW TECH STACK </h1>
+<section class="hero is-primary is-fullwidth">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">ADD NEW TECH STACK</h1>
+            <h2 class="subtitle">New Skill ? Huh ! </h2>
+        </div>
+    </div>
+</section>
 
 <form method="POST" action="/users/{{userId}}/techStack">
-    <div>
+    <div class="field">
         <label for="title">Title :</label>
         <input type="text" name="title">
     </div>
-    <div>
+    <div class="field">
         <label for="description">Description :</label>
         <input type="text" name="description">
     </div>
-    <div>
+    <div class="field">
         <label for="expertise">Expertise :</label>
         <input type="text" name="expertise">
     </div>
-    <div>
+    <div class="field">
         <label for="resources">Resources :</label>
         <input type="text" name="resources">
     </div>
 
-       <button type="submit">SUBMIT</button>
+       <button class="button is-primary">SUBMIT</button>
    </form>
-
+<nav class="breadcrumb is-large">
 <a href = '/users'>Home</a>
+</nav>
