@@ -4,17 +4,19 @@
 
 ## Overview 
 
-    Tech Tracker is an online application for the Users to track the Technologies over the course of time. 
+    Tech Tracker is an online application for the Users to track the Technical Skills  over the course of time. 
 
 ### Techical Specifications :
+
+
 
 #### This application has:
 
 ```
 Three models – 
 
-1. USER
-2. TECH STACK
+1. USERS
+2. TECH STACKS
 3. RESOURCES
 
 ```
@@ -33,8 +35,14 @@ Three models –
 
 ## Heroku 
 
+[Heroku Link](https://nameless-plateau-27580.herokuapp.com/users)
+
 ## Resources
+
 [stackoverflow.com](https://stackoverflow.com)
+[bulma.io](https://bulma.io/)
+[http://mongoosejs.com/](http://mongoosejs.com/)
+[git.generalassemb.ly](https://git.generalassemb.ly)
 
 ## Technologies Used
 ```
@@ -49,6 +57,11 @@ Three models –
 
 ## Future Scope 
 
+```
+1. Give the application the capability of Updating,Deleting Tech Stacks Model.
+2. Give the application the capability of Adding,Updating,Deleting Resource Model.
+3. Add a Login and Password So that only authenticated users get access to Modify the Details.
 
+```
 
 
