@@ -128,9 +128,11 @@ router.post('/:id/techStack', (req, res) => {
 
 // get resource list
 router.get('/:uid/techStacks/:tid/resources', (req, res) => {
-  User.findById(req.params.uid).then((users) => {
+  User.findById(req.params.uid).then((user) => {
+    const techStack = user.techStacks.id(req.params.tid)
       res.render('resources/index',{
-        users : users
+        user: user,
+        techStack : techStack
       })
   })
   .catch((error) => {

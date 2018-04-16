@@ -20,13 +20,14 @@
     </thead>
 
     <tbody>
-        {{#each users.techStacks.resources}}
+        {{users.userName}}
+        {{#each techStack.resources}}
             <tr>
                 <td>
-                    {{id}}
+                    {{this.id}}
                 </td>
                 <td>
-                    {{description}}
+                    {{this.description}}
                 </td>
             </tr>
         {{/each}}

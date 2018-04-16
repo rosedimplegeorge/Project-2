@@ -47,6 +47,8 @@ Three models –
 
 [git.generalassemb.ly](https://git.generalassemb.ly)
 
+[https://www.w3schools.com](https://www.w3schools.com/)
+
 ## Technologies Used
 ```
 1. JS
@@ -55,10 +57,16 @@ Three models –
 4. Handlebars(Handlebars allow us to embed JS variables inside of our HTML and render it as text.)
 5. Mongo DB
 6. Mongoose
+7. Bulma 
 
 ```
 
-## Future Scope 
+## Approch 
+
+
+
+
+## Future Scope -Unsolved Problems
 
 ```
 1. Give the application the capability of Updating,Deleting Tech Stacks Model.
