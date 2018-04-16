@@ -8,42 +8,41 @@
     </div>
 </section>
 <table  class="table is-fullwidth is-bordered is-hoverable">
-<thead>
-    <tr>
-        <th>
-            Title
-        </th>
-        <th>
-            Description
-        </th>
-        <th>
-            Expertise(In Yrs)
-        </th>
-        <th>
-            Resource Link
-        </th>
-    </tr>
-</thead>
+    <thead>
+        <tr>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Expertise(In Yrs)
+            </th>
+            <th>
+                Resource Link
+            </th>
+        </tr>
+    </thead>
 
-<tbody>
-{{#each users.techStacks}}
-<tr>
-    <td>
-        {{title}}
-    </td>
-    <td>
-        {{description}}
-    </td>
-    <td>
-        {{expertise}}
-    </td>
-    <td>
-        <a href="/users/{{user._id}}/techStacks/{{_id}}/resources"> Resource List</a>
-    </td>
-</tr>
-
-{{/each}}
-</tbody>
+    <tbody>
+        {{#each users.techStacks}}
+            <tr>
+                <td>
+                    {{title}}
+                </td>
+                <td>
+                    {{description}}
+                </td>
+                <td>
+                    {{expertise}}
+                </td>
+                <td>
+                    <a href="/users/{{@root.users._id}}/techStacks/{{_id}}/resources"> Resource List</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
 </table>
 
 <br>

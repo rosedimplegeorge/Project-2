@@ -1,0 +1,41 @@
+
+<section class="hero is-primary is-fullwidth">
+    <div class="hero-body">
+        <div class="container">
+            <h1 class="title is-1">Resource List</h1>
+            <h2 class="subtitle">Key to the treasure !</h2>
+        </div>
+    </div>
+</section>
+<table  class="table is-fullwidth is-bordered is-hoverable">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Description
+            </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each users.techStacks.resources}}
+            <tr>
+                <td>
+                    {{id}}
+                </td>
+                <td>
+                    {{description}}
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<br>
+<br>
+<br>
+<nav class="breadcrumb is-large">
+<a href = '/users'>Home</a>
+</nav>

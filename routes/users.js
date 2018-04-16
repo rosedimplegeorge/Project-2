@@ -3,6 +3,7 @@ const router = express.Router();
 
 const User = require('../models/userModel')
 const TechStack = require('../models/techStackModel')
+const Resource = require('../models/resourceModel')
 
 // GET users Index. 
 router.get('/', function(req, res, next) {
@@ -58,7 +59,7 @@ router.put('/:id', (req,res) =>{
     email: req.body.email,
     yrs_Of_Exp: req.body.yrs_Of_Exp
   },{new: true}).then((updatedUser)=> {
-    res.redirect(`/users/${updatedUser._id}`)
+    res.redirect("/users")
   })
   .catch((error) => {
     console.log(error)
@@ -101,6 +102,7 @@ router.get('/:id/new', (req, res) => {
   })
 })
 
+
 router.post('/:id/techStack', (req, res) => {
 
   //console.log(req.params.id)
@@ -113,6 +115,43 @@ router.post('/:id/techStack', (req, res) => {
     })
 
     user.techStacks.push(techStack1)
+
+    user.save()
+  },{new: true})
+  .then((savedTechStack) => {
+    res.redirect(`/users/${req.params.id}`)
+  })
+  .catch((error) => {
+    console.log(error)
+  })
+})
+
+// get resource list
+router.get('/:uid/techStacks/:tid/resources', (req, res) => {
+  User.findById(req.params.uid).then((users) => {
+      res.render('resources/index',{
+        users : users
+      })
+  })
+  .catch((error) => {
+      console.log(error)
+  })
+})
+
+
+// add resource
+router.post('/:uid/techStacks/:tid/resources', (req, res) => {
+
+  //console.log(req.params.id)
+  User.findById(req.params.uid)
+  TechStack.findById(req.params.tid)
+  .then((techStack) => {
+    const resource1 = new Resource({
+      id: 1,
+      description: 'test'
+    })
+
+    techStacks.push(resource1)
 
     user.save()
   },{new: true})
