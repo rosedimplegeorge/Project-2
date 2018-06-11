@@ -1,6 +1,7 @@
 # Project-2
 
 # Full Stack Server Application - TECH TRACKER
+  Full stack Application developed using Java Script, Express,Node, and MongoDB.
 
 ## Overview 
 
